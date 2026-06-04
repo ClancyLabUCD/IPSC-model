@@ -530,7 +530,7 @@ void ipsc_function( double t, double *Y, double *model_parameter_inputs, double 
     double Kbuf_C = 0.0006; // millimolar (in calcium_dynamics)
     double Cai_bufc = 1. / ( 1.0 + Buf_C * Kbuf_C / ( ( Y[2] + Kbuf_C ) * ( Y[2] + Kbuf_C ) ) );
     
-    dY[2] = ( Cai_bufc ) * ( i_leak - i_up + i_rel - dY[5]
+    dY[2] = ( Cai_bufc ) * ( i_leak - i_up + i_rel
                             - ( i_CaL_Ca + i_CaT + i_b_Ca + i_PCa - 2. * i_NaCa )
                             * Cm / ( 2.0 * Vc * F ) );
     
